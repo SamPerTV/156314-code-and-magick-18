@@ -59,7 +59,6 @@ window.renderStatistics = function (ctx, players, times) {
   renderCloud(ctx, CLOUD_X, CLOUD_Y, '#fff');
   renderText(ctx);
 
-  players = ['Вы', 'Иван', 'Юлия', 'Кекс'];
   var maxTime = getMaxElement(times);
   var scoreBar;
   for (var i = 0; i < players.length; i++) {
