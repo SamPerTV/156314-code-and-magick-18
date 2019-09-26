@@ -32,8 +32,7 @@ var rendercoatsColor = function (wizardColor) {
   var  wizardColor = WIZARD_COATCOLOR[randCoat];
         
        
-}
-   
+}  
 return wizardColor;
 }
 var rendrEyesColor = function (WIZARD_EYESCOLOR) {
@@ -46,6 +45,12 @@ var rendrEyesColor = function (WIZARD_EYESCOLOR) {
 var coatColor = rendercoatsColor(WIZARD_COATCOLOR);
 var WizardName = renderNamesWizard(WIZARD_NAMES, WIZARD_LASTNAMES);
 var WizardeyesColor = rendrEyesColor(WIZARD_EYESCOLOR);
+
+function renderWizards = function() {
+    
+    
+}
+
 var wizards = [
   {
     name: WizardName,
