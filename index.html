@@ -71,22 +71,23 @@
   <form class="setup-wizard-form"
         method="post"
         enctype="multipart/form-data"
+        action=" https://js.dump.academy/code-and-magick"
         autocomplete="off">
 
     <div class="setup-title">
       <div class="setup-user">
         <div class="upload">
-          <img class="setup-user-pic" src="./img/user-1.jpg"/>
+          <img class="setup-user-pic" src="./img/user-1.jpg" tabindex="0"/>
           <input type="file" name="avatar">
         </div>
         <label>
           <input type="text" name="username"
                  maxlength="25" required
-                 class="setup-user-name" value="Синий Пендальф"/>
+                 class="setup-user-name" value="Синий Пендальф" required minlength="2" maxlength="25"/>
         </label>
       </div>
 
-      <span class="setup-close">&times;</span>
+      <span class="setup-close" tabindex="0">&times;</span>
     </div>
 
 
@@ -181,13 +182,26 @@
   </div>
 </template>
 
-<script> 
+
+<script>
+
 var fireballSize = 22;
 var getFireballSpeed = function(left) {
   return left ? 5 : 2;
 }  
 var wizardSpeed = 3;
 var wizardWidth = 70;
+
+
+
+var fireballSize = 22;
+var getFireballSpeed = function(left) {
+    return left ? 5 : 2;
+}
+var wizardSpeed = 3;
+var wizardWidth = 70;
+
+
 var getWizardHeight = function(wizardWidth) {
     return 1.377 * wizardWidth;
 }
@@ -195,9 +209,13 @@ function getWizardX(width) {
     return width / 2 - wizardWidth / 2;
 }
 function getWizardY(height) {
+
      return height / 3;
 }
+
 </script>
+<script src="js/setup.js"></script>
+<script src="js/stat.js"></script>
 <script src="js/game.js"></script>
 
 </body>
