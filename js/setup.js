@@ -9,6 +9,7 @@ var userDialog = document.querySelector('.setup');
 var imgUserElement = document.querySelector('.setup-open-icon');
 var similarListElement = userDialog.querySelector('.setup-similar-list');
 var setupClose = document.querySelector('.setup-close');
+var setupNameInput = document.querySelector('.setup-user-name');
 var ESC_KEYCODE = 27;
 var ENTER_KEYCODE = 13;
 var similarWizardTemplate = document.querySelector('#similar-wizard-template')
@@ -73,7 +74,7 @@ imgUserElement.addEventListener('click', function () {
 
 imgUserElement.addEventListener('keydown', function (evt) {
   if (evt.keyCode === ENTER_KEYCODE) {
-    closePopup();
+    openPopup();
   }
 });
 
@@ -98,4 +99,8 @@ wizardEyesBlock.addEventListener('click', function () {
 fairBolBackground.addEventListener('click', function () {
   fairBolBackground.style.background = getRandomElementArray(FIREBALL_COLOR);
 });
-
+setupNameInput.addEventListener('keydown', function (event) {
+  if (event.keyCode === ENTER_KEYCODE) {
+    event.preventDefault();
+  }
+});
