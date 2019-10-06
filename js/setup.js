@@ -36,6 +36,15 @@ var closePopup = function () {
   document.removeEventListener('keydown', onPopupEscPress);
 };
 
+var userDialog = document.querySelector('.setup');
+userDialog.classList.remove('hidden');
+
+var similarListElement = userDialog.querySelector('.setup-similar-list');
+
+var similarWizardTemplate = document.querySelector('#similar-wizard-template')
+    .content
+    .querySelector('.setup-similar-item');
+
 var getRandomElementArray = function (array) {
   var index = Math.floor(Math.random() * array.length);
   return array[index];
@@ -104,4 +113,3 @@ wizardEyesBlock.addEventListener('click', function () {
 fairBolBackground.addEventListener('click', function () {
   fairBolBackground.style.background = getRandomElementArray(FIREBALL_COLOR);
 });
-
