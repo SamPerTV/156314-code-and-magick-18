@@ -67,6 +67,11 @@ for (var j = 0; j < wizards.length; j++) {
 similarListElement.appendChild(fragment);
 userDialog.querySelector('.setup-similar').classList.remove('hidden');
 
+setupNameInput.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === ESC_KEYCODE) {
+    evt.stopPropagation();
+  }
+});
 
 imgUserElement.addEventListener('click', function () {
   openPopup();
@@ -99,8 +104,4 @@ wizardEyesBlock.addEventListener('click', function () {
 fairBolBackground.addEventListener('click', function () {
   fairBolBackground.style.background = getRandomElementArray(FIREBALL_COLOR);
 });
-setupNameInput.addEventListener('keydown', function (event) {
-  if (event.keyCode === ENTER_KEYCODE) {
-    event.preventDefault();
-  }
-});
+
